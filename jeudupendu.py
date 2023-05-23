@@ -16,7 +16,7 @@ def jeu_du_pendu(mot):
         mot_a_deviner = ''.join([lettre if lettre in lettres_trouvees else '_' for lettre in mot]) # On affiche le mot à deviner avec les lettres trouvées et des underscores pour les lettres non trouvées
         print("Mot à deviner :", mot_a_deviner)
 
-        if mot_a_deviner == mot: # Si le mot est entièrement deviné, affiche un message de victoire et termine la fonction
+        if mot_a_deviner == mot: # Si le mot est entièrement deviné, on affiche un message de victoire et termine la fonction
             print("Vous avez trouvé le mot en :", mot)
             return
 
@@ -31,15 +31,15 @@ def jeu_du_pendu(mot):
         if lettre in lettres_trouvees:
             # Si la lettre a déjà été trouvée,
             print("Vous avez déjà trouvé cette lettre.")
-        if lettre in mot: # Si la lettre est dans le mot à deviner, l'ajoute à la liste des lettres trouvées
+        if lettre in mot: # Si la lettre est dans le mot à deviner, on l'ajoute à la liste des lettres trouvées
             lettres_trouvees.append(lettre)
         elif lettre in lettres_proposees_fausses : # Si la lettre a déjà été proposée,
             print("Vous avez déjà proposé cette lettre qui n'est pas dans le mot. Proposezs une autre lettre")
-        else: # Sinon, réduit le nombre de vie restantes et ajoute la lettre à la liste des lettres proposées
+        else: # Sinon, on réduit le nombre de vie restantes et on ajoute la lettre à la liste des lettres proposées
             nombre_de_vie =nombre_de_vie-1
             lettres_proposees_fausses.append(lettre)
             print("Lettre fausses, il vous reste", nombre_de_vie, "vies.")
 
     print("Il vous reste 0 vies. Vous avez perdu. Le mot était :", mot) #Si il y a 0 vies, on perds et affiche le mot
-    
+
 jeu_du_pendu(mot_choisi)
