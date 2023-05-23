@@ -41,9 +41,5 @@ def jeu_du_pendu(mot):
             print("Lettre incorrecte ! Vous avez", nombre_de_vie, "vies restantes.")
 
     print("Il vous reste 0 vies. Vous avez perdu. Le mot était :", mot) #Si il y a 0 vies, on perds et affiche le mot
-
-
-
-
-
+    
 jeu_du_pendu(mot_choisi)
