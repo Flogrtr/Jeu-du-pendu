@@ -38,7 +38,7 @@ def jeu_du_pendu(mot):
         else: # Sinon, réduit le nombre de vie restantes et ajoute la lettre à la liste des lettres proposées
             nombre_de_vie =nombre_de_vie-1
             lettres_proposees_fausses.append(lettre)
-            print("Lettre incorrecte ! Vous avez", nombre_de_vie, "vies restantes.")
+            print("Lettre fausses, il vous reste", nombre_de_vie, "vies.")
 
     print("Il vous reste 0 vies. Vous avez perdu. Le mot était :", mot) #Si il y a 0 vies, on perds et affiche le mot
     
